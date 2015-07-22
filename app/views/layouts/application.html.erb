@@ -3,15 +3,16 @@
 <head>
   <title>MyRailsApp</title>
   
+  <!--Bootstrap CSS-->
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
   
   <!--Animate CSS-->
   <link href="https://raw.githubusercontent.com/daneden/animate.css/master/animate.css" rel="stylesheet">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   
-  
-  
+  <!--jQuery-->
   <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>  
+  <!--Bootstrap js-->
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
   
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -47,7 +48,7 @@
     <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
-</div>
+</div><!--end Carousel-->
 
   
   <div class="container">
@@ -57,7 +58,7 @@
           <h2>Rhythm to your soul</h2>
         </div>
       </div>
-  </div>
+  </div><!--end Container-->
 
   <div class="container">
     <div class="row text-center">
@@ -65,7 +66,7 @@
         <%= yield %>
       </div>
     </div>
-  </div>
+  </div><!--end Container-->
 
 </body>
 </html>
