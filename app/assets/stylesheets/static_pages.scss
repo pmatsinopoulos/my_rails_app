@@ -4,8 +4,9 @@
 
 /*Variables*/
 $primary-colour: #b55aa3;
-$secondary-colour: #eee;
+$secondary-colour: #cd183f;
 
+$main-text-colour: #fff;
 $main-font-family: sans-serif, serif;
 $main-font-weight: 100;
 
@@ -15,6 +16,25 @@ body{
   padding-bottom:50px;
 }
 
+header{
+  width:100%;
+  position:fixed;
+  background:transparent;
+  z-index:1;
+  border-top:solid 20px $secondary-colour;
+}
+
+#logo{
+  margin:0 auto;
+  height:50px;
+  width:150px;
+  border-radius:0px 0px 175px 175px;
+  background: $secondary-colour;
+  -webkit-box-shadow: 0px 11px 5px -10px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 11px 5px -10px rgba(0,0,0,0.75);
+  box-shadow: 0px 11px 5px -10px rgba(0,0,0,0.75);
+}
+
 table{
   max-width:100%;
 }
@@ -22,12 +42,46 @@ table{
 
 /*Text*/
 body *{
+  color: $main-text-colour;
   font-family: $main-font-family;
   font-weight: $main-font-weight;
 }
 
+header h1{
+  font-size:1em;
+  text-align:center;
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+}
+
 h1{
   text-transform:uppercase;
+  color: $main-text-colour;
+}
+
+a.btn, .btn-lg{
+  background:#000;
+  color:#fff;
+  border: solid 1px #000;
+  transition: background 600ms;
+  -webkit-transition: background 600ms;
+}
+
+.btn.btn-lg{
+  padding:20px;
+  font-size:1.5em;
+  text-transform: uppercase;
+}
+
+.btn-lg:hover, a.btn:hover{
+  background: transparent;
+  color:#fff;
+  border-color:#000;
+}
+
+#logo .btn{
+  background:transparent;
+  border:none;
 }
 
 

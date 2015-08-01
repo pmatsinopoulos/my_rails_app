@@ -20,7 +20,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  
+  <header>
+    <div id="logo" class="text-center">
+      <h1>Super Sounds</h1>
+      <a class="btn" id="menu-toggle"><span class="glyphicon glyphicon-th"></span></a>
+    </div>
+  </header>
   <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
@@ -35,6 +40,7 @@
       <%= image_tag("mixing-desk.jpg") %>
       <div class="carousel-caption">
         <h1>For the Love of Music</h1>
+        <p></p>
       </div>
     </div>
   </div>
@@ -50,15 +56,7 @@
   </a>
 </div><!--end Carousel-->
 
-  
-  <div class="container">
-      <div class="row text-center">
-        <div class="col-xs-12">
-          <h1>Music to your ears</h1>
-          <h2>Rhythm to your soul</h2>
-        </div>
-      </div>
-  </div><!--end Container-->
+
 
   <div class="container">
     <div class="row text-center">
