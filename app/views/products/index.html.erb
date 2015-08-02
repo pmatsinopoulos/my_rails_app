@@ -18,7 +18,7 @@
       <tr>
         <td><%= product.name %></td>
         <td><%= product.description %></td>
-        <td><%= image_tag(product.image_url) %></td>
+        <td><%= image_tag(product.avatar) %></td>
         <td><%= product.colour %></td>
         <td><%= link_to 'Show', product, :class => "btn btn-default" %></td>
         <td><%= link_to 'Edit', edit_product_path(product), :class => "btn btn-default" %></td>
