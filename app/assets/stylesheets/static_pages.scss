@@ -46,6 +46,13 @@ table, .form input[type="text"], .form textarea{
   min-height:150px;
 }
 
+input[type="file"].btn{
+  display:block;
+  width:100%;
+  font-size:1em;
+  text-align:center;
+}
+
 
 
 /*Text*/
