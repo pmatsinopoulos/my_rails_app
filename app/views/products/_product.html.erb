@@ -2,12 +2,12 @@
   <p><%= product.name %></p>
   <%= image_tag(product.avatar, :class => "img-responsive") %>
   <!-- Button trigger modal -->
-  <button type="button" class="btn btn-default" data-toggle="modal" data-target="#<%= product.id %>">
+  <button type="button" class="btn btn-default" data-toggle="modal" data-target="#product-info-modal-<%= product.id %>">
     Product info
   </button>
 
   <!-- Modal -->
-  <div class="modal fade" id="<%= product.id %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal fade" id="product-info-modal-<%= product.id %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
