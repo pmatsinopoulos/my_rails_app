@@ -3,10 +3,11 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 /*Variables*/
-$primary-colour: #b55aa3;
-$secondary-colour: #cd183f;
+$primary-colour: #000;
+$secondary-colour: #fff;
+$highlight: #FF3D7F;
 
-$main-text-colour: #fff;
+$main-text-colour: #666;
 $main-font-family: sans-serif, serif;
 $main-font-weight: 100;
 
@@ -16,29 +17,20 @@ body{
   padding-bottom:50px;
 }
 
-header{
-  width:100%;
-  position:fixed;
-  background:transparent;
-  z-index:1;
-  border-top:solid 20px $secondary-colour;
+.top-content{
+  margin-top:50px;
+  
+  h2{
+    margin-top:0px;
+  }
 }
 
-#logo{
-  margin:0 auto;
-  height:50px;
-  width:150px;
-  border-radius:0px 0px 175px 175px;
-  background: $secondary-colour;
-  -webkit-box-shadow: 0px 11px 5px -10px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px 11px 5px -10px rgba(0,0,0,0.75);
-  box-shadow: 0px 11px 5px -10px rgba(0,0,0,0.75);
-}
 
-table, .form input[type="text"], .form textarea{
+
+/*Forms*/
+.form input[type="text"], .form textarea{
   width:100%;
   border-radius:5px;
-  color: $secondary-colour;
   padding:10px;
 }
 
@@ -62,24 +54,43 @@ body *{
   font-weight: $main-font-weight;
 }
 
-header h1{
-  font-size:1em;
-  text-align:center;
-  -webkit-margin-before: 0em;
-  -webkit-margin-after: 0em;
-}
-
 h1{
-  text-transform:uppercase;
   color: $main-text-colour;
 }
 
-a.btn, .btn-lg{
+.logo, .logo-text, .page-title{
+  font-family: 'Niconne', cursive;
+}
+
+h2{
+  color: $primary-colour;
+}
+
+h2 .logo{
+  font-size:1.25em;
+}
+
+h2 span, h2 .logo{
+  color: $highlight;
+}
+
+.intro p{
+  font-size:1.2em;
+  line-height:1.5em;
+}
+
+.right{
+  float:right;
+}
+
+
+/*Buttons*/
+a.btn, .btn-lg, .btn-default{
   background:#000;
   color:#fff;
   border: solid 1px #000;
-  transition: background 600ms;
-  -webkit-transition: background 600ms;
+  transition: background 600ms, color 600ms;
+  -webkit-transition: background 600ms, color 600ms;
 }
 
 .btn.btn-lg{
@@ -88,16 +99,56 @@ a.btn, .btn-lg{
   text-transform: uppercase;
 }
 
-.btn-lg:hover, a.btn:hover{
+.btn-lg:hover, a.btn:hover, .btn-default:hover{
   background: transparent;
-  color:#fff;
-  border-color:#000;
+  color:$highlight;
+  border-color:$highlight;
 }
 
-#logo .btn{
-  background:transparent;
+
+
+/*Navbar*/
+nav.navbar-default{
+  margin:0px;
+  background:#000;
   border:none;
+  border-radius:0px;
+  
+  a, .nav a,{
+    color: $secondary-colour;
+    transition: background 600ms, color 600ms;
+    -webkit-transition: background 600ms, color 600ms;
+  }
+
+  .nav a:hover, a.navbar-brand span, .logo .logo-text{
+    color: $highlight;
+  }
+
+  .logo .logo-text{
+    font-size:1.2em;
+  }
 }
 
 
-/*Images*/
+/*Carousel*/
+.carousel-caption{
+  background: $primary-colour;
+  opacity:.8;
+  border-radius:10px;
+}
+
+.carousel-control{
+  transition:background 600ms;
+  -webkit-transition:background 600ms;
+}
+
+.carousel-control:hover{
+  background: transparent;
+  span{
+    color: $highlight;
+    transition: color 600ms;
+    -webkit-trasition: color 600ms;
+  }
+}
+
+

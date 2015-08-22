@@ -1,13 +1,41 @@
-<h2>Featured Product:</h2>
-<%= @featured_product.name %>
-<div class="row">
-  <div class="col-xs-12 col-md-4 col-md-offset-4">
-    <br/>
-    <%= image_tag(@featured_product.avatar, :class => "img-responsive") %>
-  </div>
-</div>
-<%= @featured_product.colour %>
-<%= @featured_product.image_url %>
+<div class="row top-content">
+    <div class="col-xs-12 col-sm-6">
+      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        </ol>
 
-<hr/>
-<a class="btn btn-lg" href="products">View more products</a>
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+          <% @products.each do |product| %>
+          <div class="item<%= " active" if product == @products.first %>">
+            <%= image_tag(product.avatar) %>
+            <div class="carousel-caption">
+              <%= product.name %>
+            </div>
+              </div>
+          <% end %>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div><!--end Carousel-->
+  </div>
+  
+  <div class="col-xs-12 col-sm-6 intro">
+    <h2>We bring <span class="glyphicon glyphicon-music"></span> <span class="logo">Sweet Music</span> to your ears</h2>
+    <hr/>
+    <p>With a variety of both contemporary and modern instruments you are guaranteed to find a sound you will trully appreciate.</p>
+    <a class="btn btn-default" href="products">See our instruments</a>
+  </div><!--end Intro--> 
+</div><!-- end Top content-->

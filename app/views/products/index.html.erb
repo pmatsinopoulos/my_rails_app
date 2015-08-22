@@ -1,33 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Our Products</h1>
-
-<table class="table-responsive table">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Image url</th>
-      <th>Colour</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @products.each do |product| %>
-      <tr>
-        <td><%= product.name %></td>
-        <td><%= product.description %></td>
-        <td><%= image_tag(product.avatar) %></td>
-        <td><%= product.colour %></td>
-        <td><%= link_to 'Show', product, :class => "btn btn-default" %></td>
-        <td><%= link_to 'Edit', edit_product_path(product), :class => "btn btn-default" %></td>
-        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-default" %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Product', new_product_path, class: "btn btn-default" %>
+<h1 class="page-title">Our Instruments</h1>
+<hr/>
+<div class="row">
+  <%= render @products %>
+</div>
+<hr/>
+<%= link_to 'Add New Product', new_product_path, class: "btn btn-default" %>
