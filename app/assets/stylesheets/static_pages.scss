@@ -83,6 +83,10 @@ h2 span, h2 .logo{
   float:right;
 }
 
+.left{
+  float:left;
+}
+
 
 /*Buttons*/
 a.btn, .btn-lg, .btn-default{
@@ -113,6 +117,7 @@ nav.navbar-default{
   background:#000;
   border:none;
   border-radius:0px;
+  padding:0px;
   
   a, .nav a,{
     color: $secondary-colour;
@@ -131,6 +136,10 @@ nav.navbar-default{
 
 
 /*Carousel*/
+.carousel{
+  margin-bottom:20px;
+}
+
 .carousel-caption{
   background: $primary-colour;
   opacity:.8;
@@ -148,6 +157,20 @@ nav.navbar-default{
     color: $highlight;
     transition: color 600ms;
     -webkit-trasition: color 600ms;
+  }
+}
+
+
+
+@media (max-width: 767px){
+  a.navbar-brand{
+    padding-left:0px;
+  }
+}
+
+@media (min-width: 768px){
+  a.navbar-brand{
+    padding-left:10px;
   }
 }
 

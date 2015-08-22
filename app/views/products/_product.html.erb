@@ -19,6 +19,7 @@
           <p><%= product.description %></p>
         </div>
         <div class="modal-footer">
+          <%= link_to "Open page", product, :class => "btn left" %>
           <%= link_to 'Edit', edit_product_path(product), :class => "btn btn-default" %>
           <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-default" %>
           <button type="button" class="btn secondary" data-dismiss="modal">Close</button>

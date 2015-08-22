@@ -38,13 +38,13 @@
                 <span class="icon-bar"></span>
               </button>
               <a class="navbar-brand logo" href="/">
-                <span class="glyphicon glyphicon-music"></span> <span class="logo-text">Sweet Music</span>
+                <%= link_to '<span class="glyphicon glyphicon-music"></span> <span class="logo-text">Sweet Music</span>'.html_safe, root_path, :class => "navbar-brand logo" %>
               </a>
             </div>
             
             <div class="collapse navbar-collapse text-right" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav right">
-                <li><a href="/">Home</a></li>
+                <li><%= link_to "Home", root_path %></li>
                 <li><a href="/products">Instruments</a></li>
               </ul>
             </div>
