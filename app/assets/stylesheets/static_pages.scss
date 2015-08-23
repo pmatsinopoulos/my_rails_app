@@ -112,6 +112,12 @@ a.btn, .btn-lg, .btn-default{
 
 
 /*Navbar*/
+.nav-container{
+  width:100%;
+  background: $primary-colour;
+  padding:0px;
+}
+
 nav.navbar-default{
   margin:0px;
   background:#000;
