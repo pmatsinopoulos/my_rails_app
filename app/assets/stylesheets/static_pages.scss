@@ -157,9 +157,13 @@ a.btn, .btn-lg, .btn-default{
 .slide-in-right{
   opacity:0;
   animation-name: fadeInRight;
+  -webkit-animation-name: fadeInRight;
   animation-delay: 1.5s;
+  -webkit-animation-delay: 1.5s;
   animation-duration: 2s;
+  -webkit-animation-duration: 2s;
   animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
 }
   
 
@@ -214,8 +218,11 @@ nav.navbar-default{
   .item{
     opacity:0;
     animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
     animation-duration: 1.5s;
+    -webkit-animation-duration: 1.5s;
     animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
     transition:background 600ms;
     -webkit-transition:600ms;
   }
