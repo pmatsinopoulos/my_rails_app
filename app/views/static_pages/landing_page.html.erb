@@ -37,6 +37,8 @@
     <h2>We bring <span class="glyphicon glyphicon-music"></span> <span class="logo">Sweet Music</span> to your ears</h2>
     <hr/>
     <p>With a variety of both contemporary and modern instruments you are guaranteed to find a sound you will trully appreciate.</p>
-    <a class="btn btn-default" href="products">See our instruments</a>
+    <%= link_to "See our instruments", :products, :class => "btn slide-in-right" %>
+    <hr/>
+    <%= render "shared/login_form" %>
   </div><!--end Intro--> 
 </div><!-- end Top content-->

@@ -6,4 +6,6 @@
   <%= render @products %>
 </div>
 <hr/>
-<%= link_to 'Add New Product', new_product_path, class: "btn btn-default" %>
+<%= link_to new_product_path, :class => "btn slide-in-right" do %>
+  <span class="glyphicon glyphicon-plus-sign"></span> Add new product
+<% end %>

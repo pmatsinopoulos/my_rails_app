@@ -11,8 +11,7 @@
   <!--Google fonts-->
   <link href='http://fonts.googleapis.com/css?family=Niconne' rel='stylesheet' type='text/css'>
   
-  <!--Animate CSS-->
-  <link href="https://raw.githubusercontent.com/daneden/animate.css/master/animate.css" rel="stylesheet">
+  <!--App styles-->
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   
   <!--jQuery-->
@@ -37,15 +36,17 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a id="nav-brand" class="navbar-brand logo" href="/">
-                <%= link_to '<span class="glyphicon glyphicon-music"></span> <span class="logo-text">Sweet Music</span>'.html_safe, root_path, :class => "navbar-brand logo" %>
-              </a>
+              <%= link_to root_path, :id => "nav-brand", :class => "navbar-brand logo" do %>
+                <span class="glyphicon glyphicon-music"></span> 
+                <span class="logo-text">Sweet Music</span>
+              <% end %>
             </div>
             
             <div class="collapse navbar-collapse text-right" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav right">
                 <li><%= link_to "Home", root_path %></li>
-                <li><%= link_to "Instruments", "/products" %></li>
+                <li><%= link_to "Instruments", :products %></li>
+                <li><%= render "shared/search_form" %></li>
               </ul>
             </div>
           </div>

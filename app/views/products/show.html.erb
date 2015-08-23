@@ -13,10 +13,5 @@
   <%= image_tag(@product.avatar) %>
 </p>
 
-<p class="product-page-color">
-  <strong>Product Colour</strong>
-  <%= @product.colour %>
-</p>
-
 <%= link_to 'Edit', edit_product_path(@product), :class => "btn btn-default" %>
-<%= link_to 'Back', products_path, :class => "btn btn-default" %>
+<%= link_to 'See more instruments', products_path, :class => "btn btn-default" %>

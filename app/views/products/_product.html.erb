@@ -1,10 +1,12 @@
-<div class="col-xs-6 col-sm-4 product-thumb">
-  <p><%= product.name %></p>
-  <%= image_tag(product.avatar, :class => "img-responsive") %>
-  <!-- Button trigger modal -->
-  <button type="button" class="btn btn-default" data-toggle="modal" data-target="#product-info-modal-<%= product.id %>">
-    Product info
-  </button>
+<div class="col-xs-12 col-sm-6 col-md-4 product-thumb">
+  <div class="item">
+    <p class="text-center"><%= product.name %></p>
+    <%= image_tag(product.avatar, :class => "img-responsive") %>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-default more-info" data-toggle="modal" data-target="#product-info-modal-<%= product.id %>">
+      <span class="glyphicon glyphicon-info-sign"></span> Product info
+    </button>
+  </div>
 
   <!-- Modal -->
   <div class="modal fade" id="product-info-modal-<%= product.id %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">

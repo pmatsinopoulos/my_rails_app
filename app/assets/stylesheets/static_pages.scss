@@ -45,10 +45,47 @@ input[type="file"].btn{
   text-align:center;
 }
 
+#search-form{
+  border:solid 1px #333;
+  border-radius:5px;
+  padding:0px;
+  margin-top:10px;
+  width:auto;
+  transition:border-color 600ms;
+  -webkit-transition:border-color 600ms;
+  
+  .btn, .search-text{
+    margin:0px;
+    border:none;
+    padding:6px 10px 6px 10px;
+  }
+  
+  .search-text{
+    border-radius:5px 0px 0px 5px;
+    color: $highlight;
+    background:#333;
+    transition: background 600ms;
+    -webkit-transition: background 600ms;
+  }
+  
+  .search-text:focus{
+    outline:none;
+    background: $secondary-colour;
+  }
+  
+  .btn{
+    border-radius:0px 5px 5px 0px;
+  }
+}
+
+#search-form:hover{
+  border-color: $highlight;
+}
+
 
 
 /*Text*/
-body *{
+body *, .btn{
   color: $main-text-colour;
   font-family: $main-font-family;
   font-weight: $main-font-weight;
@@ -88,13 +125,18 @@ h2 span, h2 .logo{
 }
 
 
+
+
 /*Buttons*/
-a.btn, .btn-lg, .btn-default{
-  background:#000;
-  color:#fff;
-  border: solid 1px #000;
+a.btn, .btn-lg, .btn-default, .btn span{
+  color: $secondary-colour;
   transition: background 600ms, color 600ms;
   -webkit-transition: background 600ms, color 600ms;
+}
+
+a.btn, .btn-lg, .btn-default{
+  background:#000;
+  border: solid 1px #000;
 }
 
 .btn.btn-lg{
@@ -103,11 +145,23 @@ a.btn, .btn-lg, .btn-default{
   text-transform: uppercase;
 }
 
-.btn-lg:hover, a.btn:hover, .btn-default:hover{
+.btn-lg:hover, a.btn:hover, .btn-default:hover, .btn:hover > span{
   background: transparent;
   color:$highlight;
+}
+
+.btn-lg:hover, a.btn:hover, .btn-default:hover{
   border-color:$highlight;
 }
+
+.slide-in-right{
+  opacity:0;
+  animation-name: fadeInRight;
+  animation-delay: 1.5s;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+  
 
 
 
@@ -148,9 +202,41 @@ nav.navbar-default{
     margin-left:0px;
     display:inline-block;
     padding:15px 0px 15px 0px;
+  } 
+}
+
+
+
+/*Images*/
+.product-thumb{
+  margin-bottom:10px;
+  
+  .item{
+    opacity:0;
+    animation-name: fadeInUp;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    transition:background 600ms;
+    -webkit-transition:600ms;
   }
   
+  .item:hover{
+    background:#eee;
+  }
+
+  img{
+    margin-bottom:10px;
+  }
   
+  .item{
+    border:solid 1px #ddd; 
+    border-radius:5px;
+    padding:10px;
+  }
+  
+  .more-info{
+    width:100%;
+  }
 }
 
 
