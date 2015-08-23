@@ -3491,7 +3491,17 @@ nav.navbar-default{
 }
 
 
-
+.item{
+    opacity:0;
+    animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
+    animation-duration: 1.5s;
+    -webkit-animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    transition:background 600ms;
+    -webkit-transition:600ms;
+  }
 /*Images*/
 .product-thumb{
   margin-bottom:10px;
