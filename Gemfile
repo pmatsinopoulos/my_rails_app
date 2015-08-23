@@ -28,6 +28,12 @@ gem 'carrierwave'
 #Use Postgress as the database for Active Record
 gem 'pg'
 
+#Protect sensitive information
+gem 'figaro', '~> 1.1.1'
+
+#Required for AmazonS3
+gem "fog"
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
