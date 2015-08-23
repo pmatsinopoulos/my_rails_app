@@ -1,3 +1,4 @@
+# Carrierwave configured to work with Amazon S3
 CarrierWave.configure do |config|
   config.fog_credentials = {
     :provider               => 'AWS',                        # required
