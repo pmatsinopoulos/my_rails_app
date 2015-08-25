@@ -3310,6 +3310,36 @@ body{
 
 
 /*Forms*/
+#contact-form{
+  .form-area{
+    background:#222;
+    padding:15px;
+    border-radius:5px;
+  }
+  
+  label{
+    color: $secondary-colour;
+  }
+  
+  input[type="text"], textarea{
+    border:none;
+    border-radius:5px;
+    color: $highlight;
+    background:#333;
+    transition: background 600ms;
+    -webkit-transition: background 600ms;
+  }
+  
+  input[type="text"]:focus, textarea:focus{
+    outline:none;
+    background: $secondary-colour;
+  }
+  
+  .btn{
+    margin-top:10px;
+  }
+}
+
 .form input[type="text"], .form textarea{
   width:100%;
   border-radius:5px;
