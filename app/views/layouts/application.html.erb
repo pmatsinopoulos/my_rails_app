@@ -47,15 +47,6 @@
                 <li><%= link_to "Home", root_path %></li>
                 <li><%= link_to "Instruments", products_path %></li>
                 <li><%= link_to "Contact", contact_path %></li>
-                <% if user_signed_in? %>
-                  <li>
-                  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>        
-                  </li>
-                <% else %>
-                  <li>
-                  <%= link_to('Login', new_user_session_path) %>  
-                  </li>
-                <% end %>
                 <li><%= render "shared/search_form" %></li>
               </ul>
             </div>
@@ -66,9 +57,25 @@
   </div><!--end Container-->
   
   <div class="container">
+    <div class="row user-status">
+      <div class="col-xs-12 col-sm-6 text-left">
+        <p id="notice"><%= notice %></p>
+      </div>
+      <div class="col-xs-12 col-sm-6 text-right">
+        <% if user_signed_in? %>
+        <p>You are logged in as <%= link_to("#{current_user.first_name}", current_user) %>
+            <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>        
+          </p>
+        <% else %>
+          <p>
+            <%= link_to('Login', new_user_session_path) %> |
+            <%= link_to('Sign up', new_user_registration_path) %>  
+          </p>
+        <% end %>
+      </div>
+    </div>
     <div class="row">
-      <div class="col-xs-12 col-sm-12">
-        <%= flash[:notice] %>
+      <div class="col-xs-12">
         <%= yield %>
       </div>
     </div>

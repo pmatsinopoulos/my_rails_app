@@ -3307,6 +3307,10 @@ body{
   }
 }
 
+.user-status{
+  padding-top:20px;
+}
+
 
 
 /*Forms*/
@@ -3601,6 +3605,10 @@ nav.navbar-default{
     -webkit-animation-duration: 2s;
     animation-fill-mode: forwards;
     -webkit-animation-fill-mode: forwards;
+  }
+  
+  .navbar-collapse{
+    padding-right:0px;
   }
 }
 

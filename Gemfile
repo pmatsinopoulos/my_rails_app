@@ -34,6 +34,8 @@ gem "fog"
 
 gem 'devise'
 
+gem 'cancancan'
+
 #gem "animate-rails"
 
 # Use ActiveModel has_secure_password
