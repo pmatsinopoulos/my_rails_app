@@ -32,6 +32,8 @@ gem "figaro"
 
 gem "fog"
 
+gem 'devise'
+
 #gem "animate-rails"
 
 # Use ActiveModel has_secure_password

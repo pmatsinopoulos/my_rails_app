@@ -3310,7 +3310,7 @@ body{
 
 
 /*Forms*/
-#contact-form{
+#contact-form, .inline-form{
   .form-area{
     background:#222;
     padding:15px;
@@ -3321,7 +3321,7 @@ body{
     color: $secondary-colour;
   }
   
-  input[type="text"], textarea{
+  input[type="text"], input[type="email"], input[type="password"], textarea{
     border:none;
     border-radius:5px;
     color: $highlight;
@@ -3330,7 +3330,7 @@ body{
     -webkit-transition: background 600ms;
   }
   
-  input[type="text"]:focus, textarea:focus{
+  input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, textarea:focus{
     outline:none;
     background: $secondary-colour;
   }
@@ -3340,7 +3340,7 @@ body{
   }
 }
 
-.form input[type="text"], .form textarea{
+.form input[type="text"], input[type="email"], input[type="password"], textarea{
   width:100%;
   border-radius:5px;
   padding:10px;

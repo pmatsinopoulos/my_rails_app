@@ -1,0 +1,21 @@
+<h2 class="page-title">Forgot your password?</h2>
+<hr/>
+<div class="row">
+  <div class="col-xs-12 col-sm-4">
+    <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post, :class => "form inline-form" }) do |f| %>
+      <%= devise_error_messages! %>
+      <div class="form-area">
+        <div class="field">
+          <%= f.label :email %><br />
+          <%= f.email_field :email, autofocus: true %>
+        </div>
+
+        <div class="actions">
+          <%= f.submit "Send me reset password instructions", :class => "btn btn-default slide-in-right" %>
+        </div>
+    </div>
+    <% end %>
+  </div>
+</div>
+
+<%= render "devise/shared/links" %>
