@@ -22,6 +22,6 @@ module MyRailsApp
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
-    Rails.application.routes.default_url_options[:host] = 'heroku'
+    Rails.application.routes.default_url_options[:host] = 'https://music-to-your-ears.herokuapp.com/'
   end
 end
