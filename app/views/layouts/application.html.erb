@@ -62,8 +62,20 @@
         <p id="notice"><%= notice %></p>
       </div>
       <div class="col-xs-12 col-sm-6 text-right">
-        <% if user_signed_in? %>
-        <p>You are logged in as <%= link_to("#{current_user.first_name}", current_user) %>
+        <% if user_signed_in? 
+
+          @first_name = current_user.first_name
+          @email = current_user.email
+
+          #Check to see if current user has 
+          if @first_name.blank?
+            @logged_in_as = @email
+          else
+            @logged_in_as = @first_name
+          end 
+          %>
+        
+          <p>You are logged in as <%= link_to("#{@logged_in_as}", current_user) %> |
             <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>        
           </p>
         <% else %>
