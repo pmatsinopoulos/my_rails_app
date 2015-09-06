@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :update, :destroy]
   load_and_authorize_resource
+  #load_and_authorize_resource
 
   # GET /users
   # GET /users.json
@@ -10,7 +10,7 @@ class UsersController < ApplicationController
 
   # GET /users/1
   # GET /users/1.json
-  def show
+  def show    
   end
 
   # GET /users/new
@@ -20,8 +20,15 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
+    #authorize! :edit, @user # checks whether current_user is authorized to :edit @user
   end
 
+  # GET /settings
+  def settings
+    @user = current_user
+    render "edit"
+  end
+  
   # POST /users
   # POST /users.json
   def create
