@@ -3311,10 +3311,19 @@ body{
   padding-top:20px;
 }
 
+.panel{
+  border-color: $highlight;
+  
+  .panel-heading{
+    background-color: $highlight;
+    color: $secondary-colour;
+  }
+}
+
 
 
 /*Forms*/
-#contact-form, .inline-form{
+#contact-form, .inline-form, .new_comment{
   .form-area{
     background:#222;
     padding:15px;

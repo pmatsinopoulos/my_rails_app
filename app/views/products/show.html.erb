@@ -4,20 +4,33 @@
   <%= @product.name %>
 </h1>
 <hr/>
-<p class="product-description">
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
+<div class="row">
+  <div class="col-xs-12 col-sm-6">
+    <p class="product-description">
+      <strong>Description:</strong>
+      <%= @product.description %>
+    </p>
 
-<p>
-  <div class="rating"></div>
-</p>
+    <p class="product-page-img">
+      <%= image_tag(@product.avatar) %>
+    </p>
+    <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
+    <hr/>
+    <%= link_to 'Edit info', edit_product_path(@product), :class => "btn btn-default" %>
+    <%= link_to 'See more instruments', products_path, :class => "btn btn-default" %>  
+  </div>
 
-<p class="product-page-img">
-  <%= image_tag(@product.avatar) %>
-</p>
-<%= render 'new_comment' %>
-<%= render 'review' %>
+  <div class="col-xs-12 col-sm-6">
+    <div class="panel panel-default">
+      <div class="panel-heading">Customer reviews</div>
+      <div class="panel-body">
+        <%= render 'review' %>
+      </div>
+    </div>
+    <%= render 'new_comment' %>
+  </div>
+</div>
 
-<%= link_to 'Edit', edit_product_path(@product), :class => "btn btn-default" %>
-<%= link_to 'See more instruments', products_path, :class => "btn btn-default" %>
+
+
+

@@ -19,6 +19,7 @@
         <div class="modal-body">
           <%= image_tag(product.avatar, :class => "img-responsive") %>
           <p><%= product.description %></p>
+          <p>Average Rating: <div class="rated" data-score="<%= product.average_rating %>"></div> </p>
         </div>
         <div class="modal-footer">
           <%= link_to "Open page", product, :class => "btn left" %>
