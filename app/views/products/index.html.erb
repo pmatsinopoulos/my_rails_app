@@ -3,6 +3,11 @@
 <div class="row">
   <%= render @products %>
 </div>
+<div class="row">
+  <div class="col-xs-12">
+    <%= will_paginate @products %>
+  </div>
+</div>
 <hr/>
 <%= link_to new_product_path, :class => "btn slide-in-right" do %>
   <span class="glyphicon glyphicon-plus-sign"></span> Add new product

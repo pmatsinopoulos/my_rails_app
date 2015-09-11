@@ -60,6 +60,7 @@
     <div class="row user-status">
       <div class="col-xs-12 col-sm-6 text-left">
         <p id="notice"><%= notice %></p>
+        <p id="flash"><%= flash[:error] %></p>
       </div>
       <div class="col-xs-12 col-sm-6 text-right">
         <% if user_signed_in? 

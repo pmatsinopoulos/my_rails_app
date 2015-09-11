@@ -36,6 +36,9 @@ gem 'devise'
 
 gem 'cancancan'
 
+## Gemfile for Rails 3+, Sinatra, and Merb
+gem 'will_paginate', '~> 3.0.6'
+
 #gem "animate-rails"
 
 # Use ActiveModel has_secure_password
