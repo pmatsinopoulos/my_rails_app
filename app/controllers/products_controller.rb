@@ -5,13 +5,13 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    @product_limit = 10
+    product_limit = 10
     if params[:q]
       search_term = params[:q]
       # return our filtered list here
-      @products = Product.where("name ILIKE ?", "%#{search_term}%").paginate(page: params[:page], per_page: @product_limit)
+      @products = Product.where("name ILIKE ?", "%#{search_term}%").paginate(page: params[:page], per_page: product_limit)
     else
-      @products = Product.paginate(page: params[:page], per_page: @product_limit)
+      @products = Product.paginate(page: params[:page], per_page: product_limit)
     end
   end
 

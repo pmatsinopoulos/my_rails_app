@@ -4,7 +4,9 @@
     <div class="rated" data-score="<%= comment.rating %>"></div>
     <p class="comment-text"><%= comment.body %></p>
     <% if signed_in? && current_user.admin? %>
-      <%= link_to 'Delete comment', product_comment_path(@product, comment), method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-default" %>
+      <%= link_to product_comment_path(@product, comment), method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-default btn-xs" do %>
+        <span class="glyphicon glyphicon-trash"></span>
+      <% end %>
     <% end %>
     <hr>
   <% end %>
