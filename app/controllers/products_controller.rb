@@ -5,7 +5,7 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    @product_limit = 1
+    @product_limit = 10
     if params[:q]
       search_term = params[:q]
       # return our filtered list here
