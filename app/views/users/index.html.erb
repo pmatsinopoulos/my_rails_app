@@ -21,8 +21,10 @@
         <td><%= user.email %></td>
         <td>
           <%= 
-          if current_user.admin?
+          if user.admin?
             user.admin
+          else
+            "false"
           end 
           %>
         </td>
