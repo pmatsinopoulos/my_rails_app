@@ -3,9 +3,9 @@
     <p class="text-center"><%= product.name %></p>
     <%= image_tag(product.avatar, :class => "img-responsive") %>
     <!-- Button trigger modal -->
-    <button type="button" class="btn btn-default more-info" data-toggle="modal" data-target="#product-info-modal-<%= product.id %>">
+    <%= link_to "Preview: #{product.name}", :data => {:toggle => "modal", :target => "#product-info-modal-#{product.id}"}, :class => "btn btn-default more-info" do %>
       <span class="glyphicon glyphicon-info-sign"></span> Product info
-    </button>
+    <% end %>
   </div>
 
   <!-- Modal -->
