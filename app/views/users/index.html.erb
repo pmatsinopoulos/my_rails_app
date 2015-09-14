@@ -13,12 +13,13 @@
   </thead>
 
   <tbody>
+    <% @users.each do |user| %>
       <tr>
         <th><%= user.id %></th>
         <td><%= user.first_name %></td>
         <td><%= user.last_name %></td>
         <td><%= user.email %></td>
-        <td></td>
+        <td><%= user.admin %></td>
         <td><%= link_to 'Show', user, :class => "btn btn-default slide-in-right" %></td>
         <td><%= link_to 'Edit', edit_user_path(user), :class => "btn btn-default slide-in-right" %></td>
         <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-default slide-in-right" %></td>
