@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe User do
+describe UserController do
 
   context "first and last name present" do
 
