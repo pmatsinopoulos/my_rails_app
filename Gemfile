@@ -50,7 +50,7 @@ gem 'will_paginate', '~> 3.0.6'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-
+# Development and Test environment
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
@@ -60,10 +60,25 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-  
+end
+
+# Development environment
+group :development do
+  gem 'guard'
+  gem 'guard-spork'
+  gem "spork-rails"
+  gem 'guard-rspec', require: false
   gem 'rspec-rails', '~> 3.0'
 end
 
+# Test environment
+group :test do
+  gem 'rspec-rails', '~> 3.0'
+  
+  gem 'factory_girl_rails'
+end
+
+# Production environment
 group :production do
   gem 'rails_12factor'
 end
