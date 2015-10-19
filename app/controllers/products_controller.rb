@@ -6,6 +6,7 @@ class ProductsController < ApplicationController
   # GET /products.json
   def index
     product_limit = 10
+
     if params[:q]
       search_term = params[:q]
       # return our filtered list here
@@ -17,7 +18,7 @@ class ProductsController < ApplicationController
 
   # GET /products/1
   # GET /products/1.json
-  def show
+  def show  
     @comments = @product.comments.order("created_at DESC").paginate(page: params[:page], per_page: 3)
   end
 

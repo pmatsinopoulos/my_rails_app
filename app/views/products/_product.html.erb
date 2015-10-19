@@ -6,6 +6,9 @@
     <%= link_to "Preview: #{product.name}", :data => {:toggle => "modal", :target => "#product-info-modal-#{product.id}"}, :class => "btn btn-default more-info" do %>
       <span class="glyphicon glyphicon-info-sign"></span> Product info
     <% end %>
+    <%= form_tag "/payments/create" do %>
+    <%= render partial: "shared/stripe_checkout_button", :locals => { :product => product } %>
+    <% end %>
   </div>
 
   <!-- Modal -->
