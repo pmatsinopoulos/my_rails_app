@@ -15,7 +15,7 @@ class CommentsController < ApplicationController
   end
   
   def destroy
-    @comment = Comment.find(session[:id])
+    @comment = Comment.find(params[:id])
     product = @comment.product
     
     if current_user.admin?
