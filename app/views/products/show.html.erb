@@ -10,7 +10,7 @@
     </p>
 
     <p class="product-page-img">
-      <%= image_tag(@product.avatar) %>
+      <%= image_tag(@product.avatar, :class => "img-zoom") %>
     </p>
     <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
     <hr/>

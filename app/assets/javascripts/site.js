@@ -7,3 +7,8 @@ $(document).on('ready page:load', function(){
       }
     });
 });
+
+$(document).on('ready page:load', function () { 
+  // All your code here 
+  $('.img-zoom').elevateZoom();
+});

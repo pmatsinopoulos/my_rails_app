@@ -15,8 +15,9 @@ class CommentsController < ApplicationController
   end
   
   def destroy
-    @comment = Comment.find(params[:id])
+    @comment = Comment.find(session[:id])
     product = @comment.product
+    
     if current_user.admin?
       @comment.destroy
       redirect_to product
