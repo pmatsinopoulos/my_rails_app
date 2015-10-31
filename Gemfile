@@ -43,6 +43,10 @@ gem 'will_paginate', '~> 3.0.6'
 
 gem 'stripe'
 
+gem 'redis-rails'
+
+gem 'redis-store'
+
 #gem "animate-rails"
 
 # Use ActiveModel has_secure_password
