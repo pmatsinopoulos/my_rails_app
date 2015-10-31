@@ -23,6 +23,8 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+gem 'angularjs-rails'
+
 #Allow image uploads to default location
 gem 'carrierwave'
 #Use Postgress as the database for Active Record

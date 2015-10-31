@@ -1,6 +1,7 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
+  respond_to :json, :html
 
   # GET /products
   # GET /products.json
@@ -11,6 +12,7 @@ class ProductsController < ApplicationController
       search_term = params[:q]
       # return our filtered list here
       @products = Product.where("name ILIKE ?", "%#{search_term}%").paginate(page: params[:page], per_page: product_limit)
+      respond_with @products
     else
       @products = Product.paginate(page: params[:page], per_page: product_limit)
     end
