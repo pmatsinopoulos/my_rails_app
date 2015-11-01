@@ -7,4 +7,8 @@ class Product < ActiveRecord::Base
   def average_rating
     comments.average(:rating).to_f
   end
+  
+  def cache_key
+    Rails.cache.fetch(Product)
+  end
 end
