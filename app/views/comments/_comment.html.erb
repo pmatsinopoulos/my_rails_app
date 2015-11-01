@@ -1,14 +1,12 @@
-<% cache(@product.comment.cache_key) do %>
-  <p>
-    <%= comment.user.first_name %>  <small><em><%= "#{time_ago_in_words(comment.created_at)} ago" %></em></small>
-  </p>
-  <div class="rated" data-score="<%= comment.rating %>"></div>
-  <p class="comment-text"><%= comment.body %></p>
-  <% if signed_in? && current_user.admin? %>
-    <%= link_to product_comment_path(@product, comment), method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-default btn-xs" do %>
-      <span class="glyphicon glyphicon-trash"></span>
-    <% end %>
+<p>
+  <%= comment.user.first_name %>  <small><em><%= "#{time_ago_in_words(comment.created_at)} ago" %></em></small>
+</p>
+<div class="rated" data-score="<%= comment.rating %>"></div>
+<p class="comment-text"><%= comment.body %></p>
+<% if signed_in? && current_user.admin? %>
+  <%= link_to product_comment_path(@product, comment), method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-default btn-xs" do %>
+    <span class="glyphicon glyphicon-trash"></span>
   <% end %>
-  <hr>
 <% end %>
+<hr>
 

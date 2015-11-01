@@ -9,6 +9,6 @@ class Product < ActiveRecord::Base
   end
   
   def cache_key
-    Rails.cache.fetch(Product)
+  "#{id}-#{updated.to_s(:number)}"
   end
 end
