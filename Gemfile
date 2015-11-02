@@ -77,6 +77,7 @@ group :development do
   gem "spork-rails"
   gem 'guard-rspec', require: false
   gem 'rspec-rails', '~> 3.0'
+  gem 'quiet_assets'
 end
 
 # Test environment
