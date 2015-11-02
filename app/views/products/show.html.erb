@@ -1,3 +1,4 @@
+<% cache(@product.cache_key) do %>
   <h1>
     <%= @product.name %>
   </h1>
@@ -22,16 +23,11 @@
       <div class="panel panel-default">
         <div class="panel-heading">Customer reviews</div>
         <div class="panel-body">
-          <% cache(@comments.count) do %>
-            <%= render 'review' %>
-            <%= will_paginate @comments %>
-          <% end %>
+          <%= render 'review' %>
+          <%= will_paginate @comments %>
         </div>
       </div>
       <%= render 'new_comment' %>
     </div>
   </div>
-
-
-
-
+<% end %>
